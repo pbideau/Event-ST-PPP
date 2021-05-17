@@ -1,0 +1,4 @@
+*.png
+*.prof
+*.json
+**/__pycache__/
