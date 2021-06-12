@@ -18,9 +18,9 @@ This is the implementation of the paper "The Spatio-Temporal Poisson Point Proce
 
 ## Getting Started
 
-A demo version of the code can be run by simply executing the command:
+A demo version of the code can be run by executing the command:
     
-    python src/main.py
+    python src/main.py -f
 
 It will run with default arguments (as used in the experiments of the submitted paper).
 The output is (1) an estimate of the angular velocity of the event camera and (2) aligned events that can be visualized via an image of events showing sharp object contours. Both outputs can be found in the output folder.
@@ -31,16 +31,17 @@ The record in the output.txt is in the format of:
 
 ### Angular velocity estimation
 
-The provided demo version runs the code on a short subsequence of the event sequence *dynamic_rotatation* of the *DAVIS_240C dataset* estimating the angular velocity of the event camera. It can be also run by executing:
+The provided demo version runs the code on a short subsequence of the event sequence *dynamic_rotatation* of the *DAVIS_240C dataset* estimating the angular velocity of the event camera. It can be run by executing:
 
     python src/main.py --seq dynamic_rotation -t 'rot'
 
 
 ### Linear velocity estimation
 
-Optionally the code is designed to also estimate the linear velocity of an event camera. This can be run on a short example sequence by executing:
+To estimate the linear velocity of an event camera on a short example sequence execute:
 
     python src/main.py --seq dynamic_translation -t 'trans'
+    
     
 ### Optional parameter settings
 
@@ -72,9 +73,9 @@ Details regarding optional parameters settings of the code are shown below:
 
 ## Evaluation
 
-The code also provides evaluation part. Mainly two files are necessary for the evaluation, the result file from estimation and the groundtruth file.
+We provide code for evaluation. Two files are necessary for the evaluation, the result file (output of the estimation) and the groundtruth file.
 
-Please notice that the result file need to be in a certain format:
+Please notice that the result file needs to have the following format:
 
     index, reference time, end time, [loss], wx, wy, wz ([*] is optional)
 
@@ -84,7 +85,7 @@ Simply run the code using command:
 
     python src/eval.py
 
-Some dialog boxes for choosing files would come out. Please follow the instructions shown in the command line window or the title of dialog box.
+Dialog boxes for choosing result and groundtruth file will show up. Please follow the instructions shown in the command line window or the title of dialog box.
 
 
 
