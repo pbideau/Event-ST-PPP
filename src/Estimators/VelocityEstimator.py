@@ -84,14 +84,6 @@ class VelocityEstimator(Estimator):
             np.savetxt(save_filepath, np.array(self.estimated_val), fmt=[
                 '%d', '%.9f', '%.9f', '%.9f', '%.9f', '%.9f', '%.9f'], delimiter=' ')
 
-    def loss_func(self, x, events_batch, *args) -> torch.float32:
-        warped_events_batch = self.warp_event(x, events_batch) 
-        frame = self.events2frame(warped_events_batch, fixed_size = self.fixed_size, padding = self.padding)
-        frame = convGaussianFilter(frame)
-        loss,_ = self.poisson(frame.abs(), *args)
-
-        return loss
-
     def optimization(self, init_poses, events_tensor, device, *args):
         # initializing local variables for class atrributes
         optimizer_name = self.optimizer_name

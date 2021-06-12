@@ -1,8 +1,9 @@
 from Estimators.PPPVelocityEstimator import PPPVelocityEstimator
+from Estimators.AngularVelocityEstimator import AngularVelocityEstimator
 from utils.utils import *
 
 
-class PPPAngularVelocityEstimator(PPPVelocityEstimator):
+class PPPAngularVelocityEstimator(PPPVelocityEstimator, AngularVelocityEstimator):
     def __init__(self, dataset, dataset_path, sequence, Ne, overlap=0, fixed_size = True, padding = 100,
                     optimizer = 'Adam', optim_kwargs = None, lr = 0.05, lr_step = 250, lr_decay = 0.1, iters = 250
                     ) -> None:

@@ -11,7 +11,7 @@ class EstimatorFactory(object):
             if transformation == "rot":
                 print("Using method: Poisson Point Process for angular velocity estimation")
                 self.VE = PPPAngularVelocityEstimator(dataset=dataset, dataset_path=dataset_path, sequence=sequence, Ne=Ne, overlap=0, fixed_size=True, padding=100, lr=lr, lr_step=iters, iters=iters)
-            elif method == "trans":
+            elif transformation == "trans":
                 print("Using method: Poisson Point Process for linear velocity estimation")
                 self.VE = PPPLinearVelocityEstimator(dataset=dataset, dataset_path=dataset_path, sequence=sequence, Ne=Ne, overlap=0, fixed_size=True, padding=100, lr=lr, lr_step=iters, iters=iters)
             else:
@@ -22,7 +22,7 @@ class EstimatorFactory(object):
             if transformation == "rot":
                 print("Using method: Contrast maximization for angular velocity estimation")
                 self.VE = CMaxAngularVelocityEstimator(dataset=dataset, dataset_path=dataset_path, sequence=sequence, Ne=Ne, overlap=0, fixed_size=True, padding=100, lr=lr, lr_step=iters, iters=iters)
-            elif method == "trans":
+            elif transformation == "trans":
                 print("Using method: Contrast maximization for linear velocity estimation")
                 self.VE = CMaxLinearVelocityEstimator(dataset=dataset, dataset_path=dataset_path, sequence=sequence, Ne=Ne, overlap=0, fixed_size=True, padding=100, lr=lr, lr_step=iters, iters=iters)
             else:
