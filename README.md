@@ -1,6 +1,6 @@
 # Demo Code for Event Alignment
 
-This is the implementation of the paper "The Spatio-Temporal Poisson Point Process: A Simple model for the Alignment of Event data" in Python 3 . The code takes an event sequence recorded by an event camera as input and accurately registers events to each other. In addition the code estimates the camera's angular- and linear velocity.
+This is the implementation of the paper "The Spatio-Temporal Poisson Point Process: A Simple model for the Alignment of Event data" (Python 3) . The code takes events as input and registers events to each other. While accurately registering events with each other, the camera's angular and linear velocity is simultaneously estimated.
 
 <p align="center">
   <img height="300" src="/imgs/overview-diagram.png">
@@ -22,23 +22,23 @@ A demo version of the code can be run by executing the command:
     
     python src/main.py -f
 
-It will run with default arguments (as used in the experiments of the submitted paper).
-The output is (1) an estimate of the angular velocity of the event camera and (2) aligned events that can be visualized via an image of events showing sharp object contours. Both outputs can be found in the output folder.
+this will run the code with its default arguments (as used in the experiments of the paper).
+The output is (1) an estimate of the angular velocity of the event camera and (2) aligned events visualized via an image of events showing sharp object contours. Both outputs can be found in the output folder.
 
-The record in the output.txt is in the format of:
+The file output.txt is in the format of:
 
 [index, reference time, end time, loss value, &omega;<sub>x</sub>, &omega;<sub>y</sub>, &omega;<sub>z</sub> ]
 
 ### Angular velocity estimation
 
-The provided demo version runs the code on a short subsequence of the event sequence *dynamic_rotatation* of the *DAVIS_240C dataset* estimating the angular velocity of the event camera. It can be run by executing:
+The provided demo version runs the code on a short subsequence of the event sequence *dynamic_rotatation* of the *DAVIS_240C dataset* estimating the angular velocity of the event camera. The demo can be run by executing:
 
     python src/main.py --seq dynamic_rotation -t 'rot'
 
 
 ### Linear velocity estimation
 
-To estimate the linear velocity of an event camera on a short example sequence execute:
+To estimate the linear velocity of an event camera on a test example execute:
 
     python src/main.py --seq dynamic_translation -t 'trans'
     
@@ -73,7 +73,7 @@ Details regarding optional parameters settings of the code are shown below:
 
 ## Evaluation
 
-We provide code for evaluation. Two files are necessary for the evaluation, the result file (output of the estimation) and the groundtruth file.
+We provide code for evaluation. Two input files are necessary for the evaluation, the result file (output.txt - output of the estimation) and the groundtruth file.
 
 Please notice that the result file needs to have the following format:
 
@@ -81,7 +81,7 @@ Please notice that the result file needs to have the following format:
 
 ### How to run it?
 
-Simply run the code using command:
+Simply run the code using the command:
 
     python src/eval.py
 
