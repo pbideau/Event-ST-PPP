@@ -1,6 +1,6 @@
 # Demo Code for Event Alignment
 
-This is the implementation of the submission "The Spatio-Temporal Poisson Point Process: A Simple model for the Alignment of Event data" (ID 6649) in Python 3 . The code takes an event sequence recorded by an event camera as input and accurately registers events to each other. In addition the code estimates the camera's angular- and linear velocity.
+This is the implementation of the paper "The Spatio-Temporal Poisson Point Process: A Simple model for the Alignment of Event data" in Python 3 . The code takes an event sequence recorded by an event camera as input and accurately registers events to each other. In addition the code estimates the camera's angular- and linear velocity.
 
 <p align="center">
   <img height="300" src="/imgs/overview-diagram.png">
