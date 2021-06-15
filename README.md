@@ -87,6 +87,17 @@ Simply run the code using the command:
 
 Dialog boxes for choosing result and groundtruth file will show up. Please follow the instructions shown in the command line window or the title of dialog box.
 
+## Citation
+Use this bibtex to cite this repository:
+```
+@misc{gu2021spatiotemporal,
+      title={The Spatio-Temporal Poisson Point Process: A Simple Model for the Alignment of Event Camera Data}, 
+      author={Cheng Gu and Erik Learned-Miller and Daniel Sheldon and Guillermo Gallego and Pia Bideau},
+      year={2021},
+      eprint={2106.06887},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+} 
+```
 
-
-
+## Projects using this Code
