@@ -90,13 +90,11 @@ Dialog boxes for choosing result and groundtruth file will show up. Please follo
 ## Citation
 Use this bibtex to cite this repository:
 ```
-@misc{gu2021spatiotemporal,
-      title={The Spatio-Temporal Poisson Point Process: A Simple Model for the Alignment of Event Camera Data}, 
-      author={Cheng Gu and Erik Learned-Miller and Daniel Sheldon and Guillermo Gallego and Pia Bideau},
-      year={2021},
-      eprint={2106.06887},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Gu21iccv,
+title={The Spatio-Temporal Poisson Point Process: A Simple Model for the Alignment of Event Camera Data},
+author={Cheng Gu and Erik Learned-Miller and Daniel Sheldon and Guillermo Gallego and Pia Bideau},
+booktitle={International Conference on Computer Vision (ICCV)},
+year={2021}
 } 
 ```
 
